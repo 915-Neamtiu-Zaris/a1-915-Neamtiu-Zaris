@@ -1,6 +1,8 @@
 #
 # Implement the program to solve the problem statement from the first set here
 #
+# Generate the first prime number larger than a given natural number n.
+#
 
 def prim(a):
     if a == 2:
@@ -10,6 +12,8 @@ def prim(a):
     if a % 2 == 0:
         return 0
     for x in range(3, a, 2):
+        if x * x > a:
+            break;
         if a % x == 0:
             return 0
     return 1

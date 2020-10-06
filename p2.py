@@ -1,6 +1,13 @@
 #
 # Implement the program to solve the problem statement from the second set here
 #
+#Determine a calendar date (as year, month, day) starting from two
+#integer numbers representing the year and the day number
+#inside that year (e.g. day number 32 is February 1st).
+#Take into account leap years. Do not use Python's inbuilt date/time functions.
+#
+
+
 
 #Functie de cautare binara care returneaza cea mai mare valoare mai mica decat
 #numarul zilei obtinut din input si indicele acestei valori in lista de sume partiale.
@@ -42,6 +49,7 @@ def solve(dayNumber, yearNumber):
     indexMonth = lResults[1] + 1    #deoarece indrez e initializat cu -1 in algoritmul de cautare binara
                                     #si din cauza naturii algoritmului, se returneaza 'indicele lunii
                                     #cautate' -1, asa ca il incrementam
+    print(lSumDays)
 
     if dayNumber > lSumDays[lResults[1]]:               #daca numarul zilei de la input e mai mare ca rezultatul aflat pe indicele
         indexDay = dayNumber - lSumDays[lResults[1]]    #gasit de algoritm (unde se afla cea mai mare valoare mai mica decat numarul zilei introdus 
